@@ -59,6 +59,11 @@ export function encryptStringSync(
 
 // Decryption --
 
+/**
+ * @deprecated
+ *
+ * Causes stack errors on large strings, use {@link parseCloakedString} instead.
+ */
 export const cloakedStringRegex =
   /^v1\.aesgcm256\.(?<fingerprint>[0-9a-fA-F]{8})\.(?<iv>[a-zA-Z0-9-_]{16})\.(?<ciphertext>[a-zA-Z0-9-_]{22,})={0,2}$/
 
