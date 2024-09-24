@@ -85,7 +85,7 @@ function isBase64(str: string) {
   )
 }
 
-function parseCloakedString(input: CloakedString) {
+export function parseCloakedString(input: CloakedString) {
   const [version, algorithm, fingerprint, iv, ciphertext, nothing] =
     input.split('.')
 
