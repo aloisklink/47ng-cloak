@@ -33,7 +33,8 @@
     "build:ts": "tsc",
     "build": "run-s build:clean build:ts",
     "ci": "run-s build test",
-    "prepare": "husky install"
+    "prepare:husky": "husky install",
+    "prepare": "run-p prepare:husky build:ts"
   },
   "dependencies": {
     "@47ng/codec": "^1.0.1",
